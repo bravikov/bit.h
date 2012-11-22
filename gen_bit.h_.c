@@ -1,3 +1,7 @@
+// 22 nov 2012
+// https://github.com/bravikov/bit.h
+// bravikov@gmail.com
+
 #include <stdio.h>
 
 //        сборка: gcc -std=c99 gen_bit.h_.c

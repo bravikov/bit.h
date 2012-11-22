@@ -1,3 +1,7 @@
+// 22 nov 2012
+// https://github.com/bravikov/bit.h
+// bravikov@gmail.com
+
 #ifndef BIT_H
 #define BIT_H
 
