@@ -1,36 +1,32 @@
-// 22 nov 2012
-// https://github.com/bravikov/bit.h
-// bravikov@gmail.com
+// project: https://github.com/bravikov/bit.h
+//  author: Dmitry Bravikov (bravikov@gmail.com)
+
+//    make: gcc -Wall -std=c99 -o gen gen_bit.h_.c
+//     use: ./gen > bit.h
 
 #include <stdio.h>
 
-//        сборка: gcc -std=c99 gen_bit.h_.c
-// использование: ./a.out > bit.h
+void gen(const char * suffix, const int shift);
 
 int main()
 {   
-    printf("#ifndef BIT_H\n");
-    printf("#define BIT_H\n\n");
+    printf( "// project: https://github.com/bravikov/bit.h\n"
+            "//  author: Dmitry Bravikov (bravikov@gmail.com)\n\n"
+            "#ifndef BIT_H\n"
+            "#define BIT_H\n\n");
     
-    // Без разделения тетрад
-    for (int i = 0; i < 256; i++)
-    {
-        printf("#define b");
-        
-        for (int b = 7; b >= 0; b--)
-        {
-            if ( i & (1 << b) )
-                printf("1");
-            else
-                printf("0");
-        }
-        
-        printf(" %i\n",i);
-    }
+    gen(""  , 0*8);
+    gen("_1", 1*8);
+    gen("_2", 2*8);
+    gen("_3", 3*8);
     
-    printf("\n");
+    printf("#endif\n\n");
     
-    // С разделением тетрад
+    return 0;
+}
+
+void gen(const char * suffix, const int shift)
+{
     for (int i = 0; i < 256; i++)
     {
         printf("#define b");
@@ -45,11 +41,10 @@ int main()
             if (b == 4) printf("_");
         }
         
-        printf(" %i\n",i);
+        printf("%s", suffix);
+        
+        printf(" %u\n", i << shift);
     }
-    
-    printf("\n#endif\n\n");
-    
-    return 0;
+    printf("\n");
 }
 
