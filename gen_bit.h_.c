@@ -1,8 +1,7 @@
-// project: https://github.com/bravikov/bit.h
-//  author: Dmitry Bravikov (bravikov@gmail.com)
-
-//    make: gcc -Wall -std=c99 -o gen gen_bit.h_.c
-//     use: ./gen > bit.h
+/* Project site: https://github.com/bravikov/bit.h
+ *
+ * use: gcc -Wall -std=c99 -o gen gen_bit.h_.c && ./gen > bit.h
+ */
 
 #include <stdio.h>
 
@@ -10,17 +9,16 @@ void gen(const char * suffix, const int shift);
 
 int main()
 {   
-    printf( "// project: https://github.com/bravikov/bit.h\n"
-            "//  author: Dmitry Bravikov (bravikov@gmail.com)\n\n"
-            "#ifndef BIT_H\n"
-            "#define BIT_H\n\n");
+    printf( "/* Project site: https://github.com/bravikov/bit.h */\n\n"
+            "#ifndef BIT_H_79EC2540_A696_4151_BAAC_6407B520A95C\n"
+            "#define BIT_H_79EC2540_A696_4151_BAAC_6407B520A95C\n\n");
     
     gen(""  , 0*8);
     gen("_1", 1*8);
     gen("_2", 2*8);
     gen("_3", 3*8);
     
-    printf("#endif\n\n");
+    printf("#endif /* #ifndef BIT_H_79EC2540_A696_4151_BAAC_6407B520A95C */\n");
     
     return 0;
 }

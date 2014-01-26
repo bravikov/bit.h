@@ -1,7 +1,7 @@
-// project: https://github.com/bravikov/bit.h
-//  author: Dmitry Bravikov (bravikov@gmail.com)
-
-//     use: gcc -Wall -std=c99 -o test test_bit.h_.c && ./test
+/* Project site: https://github.com/bravikov/bit.h
+ *
+ * use: gcc -Wall -std=c99 -o test test_bit.h_.c && ./test
+ */
 
 #include <stdio.h>
 #include <stdint.h>

@@ -1,8 +1,7 @@
-// project: https://github.com/bravikov/bit.h
-//  author: Dmitry Bravikov (bravikov@gmail.com)
+/* Project site: https://github.com/bravikov/bit.h */
 
-#ifndef BIT_H
-#define BIT_H
+#ifndef BIT_H_79EC2540_A696_4151_BAAC_6407B520A95C
+#define BIT_H_79EC2540_A696_4151_BAAC_6407B520A95C
 
 #define b0000_0000 0
 #define b0000_0001 1
@@ -1032,5 +1031,4 @@
 #define b1111_1110_3 4261412864
 #define b1111_1111_3 4278190080
 
-#endif
-
+#endif /* #ifndef BIT_H_79EC2540_A696_4151_BAAC_6407B520A95C */
