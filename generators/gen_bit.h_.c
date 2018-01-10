@@ -1,7 +1,4 @@
-/* Project site: https://github.com/bravikov/bit.h
- *
- * use: gcc -Wall -std=c99 -o gen gen_bit.h_.c && ./gen > ../bit.h
- */
+/* Project URL: https://github.com/bravikov/bit.h */
 
 #include <stdio.h>
 

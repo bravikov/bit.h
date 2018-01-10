@@ -1,7 +1,4 @@
-/* Project site: https://github.com/bravikov/bit.h
- *
- * use: gcc -Wall -std=c99 -o test test_bit.h_.c && ./test
- */
+/* Project URL: https://github.com/bravikov/bit.h */
 
 #include <stdio.h>
 #include <stdint.h>
