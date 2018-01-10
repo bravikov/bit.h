@@ -1,6 +1,6 @@
 /* Project site: https://github.com/bravikov/bit.h
  *
- * use: gcc -Wall -std=c99 -o binary_characters gen_binary_characters.c && ./binary_characters > binary_character.h
+ * use: gcc -Wall -std=c99 -o binary_characters gen_binary_characters.c && ./binary_characters > ../binary_character.h
  */
 
 #include <stdio.h>

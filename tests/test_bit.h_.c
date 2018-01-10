@@ -5,7 +5,7 @@
 
 #include <stdio.h>
 #include <stdint.h>
-#include "bit.h"
+#include "../bit.h"
 
 int main()
 {
