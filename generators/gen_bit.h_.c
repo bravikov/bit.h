@@ -67,7 +67,7 @@ void gen(const char * suffix, const int shift)
         
         printf("%s", suffix);
         
-        printf(" %u\n", i << shift);
+        printf(" (%u)\n", i << shift);
     }
     printf("\n");
 }
