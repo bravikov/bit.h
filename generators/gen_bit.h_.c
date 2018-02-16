@@ -28,6 +28,7 @@
 
 #include "license_generator.h"
 #include <stdio.h>
+#include <inttypes.h>
 
 void gen(const char * suffix, const int shift);
 
@@ -43,6 +44,10 @@ int main()
     gen("_1", 1*8);
     gen("_2", 2*8);
     gen("_3", 3*8);
+    gen("_4", 4*8);
+    gen("_5", 5*8);
+    gen("_6", 6*8);
+    gen("_7", 7*8);
     
     printf("#endif /* #ifndef BIT_H_79EC2540_A696_4151_BAAC_6407B520A95C */\n");
     
@@ -51,7 +56,7 @@ int main()
 
 void gen(const char * suffix, const int shift)
 {
-    for (int i = 0; i < 256; i++)
+    for (uint64_t i = 0; i < 256; i++)
     {
         printf("#define b");
         
@@ -67,7 +72,7 @@ void gen(const char * suffix, const int shift)
         
         printf("%s", suffix);
         
-        printf(" (%u)\n", i << shift);
+        printf(" (%" PRIu64 ")\n", i << shift);
     }
     printf("\n");
 }

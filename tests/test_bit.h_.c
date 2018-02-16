@@ -27,19 +27,28 @@
 /* Project URL: https://github.com/bravikov/bit.h */
 
 #include <stdio.h>
-#include <stdint.h>
+#include <inttypes.h>
 #include "../bit.h"
 
 int main()
 {
-    uint32_t test1 = 0xFFFFFFFF;
-    uint32_t test2 = b1111_1111_3 | b1111_1111_2 | b1111_1111_1 | b1111_1111;
+    uint64_t test1 = 0xFFFFFFFFFFFFFFFF;
+    uint64_t test2
+        = /*b1111_1111_7*/
+         b1111_1111_6
+        | b1111_1111_5
+        | b1111_1111_4
+        | b1111_1111_3
+        | b1111_1111_2
+        | b1111_1111_1
+        | b1111_1111
+    ;
     
     printf("Test bit.h ... ");
     if (test1 == test2)
         printf("OK\n");
     else
-        printf("fail (%u)\n", test2);
+        printf("fail (0x%" PRIX64 ")\n", test2);
         
     return 0;
 }
